@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+</head>
+
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <h1><a href="{{ site.Home.RelPermalink }}">Schwammy Says...</a></h1>
+            <h2>whatever comes to mind</h2>
+        </header>
+        <div class="page-layout">
+            <main>
+                <article>
+                    <h1>{{ .Title }}</h1>
+                    <p>Posted on {{ .Date.Format "January 2, 2006" }} by {{ .Params.author }}</p>
+                    <hr />
+                    {{ .Content }}
+                </article>
+            </main>
+            {{ partial "sidebar.html" . }}
+        </div>
+    </div>
+</body>
+
+</html>

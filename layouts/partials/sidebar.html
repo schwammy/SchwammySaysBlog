@@ -1,0 +1,19 @@
+<aside class="sidebar">
+    <section class="sidebar-section">
+        <img src="{{ "images/schwammy-drawing-500x500.jpg" | relURL }}" alt="Andy Schwam" width="150" height="150">
+        <h2>Schwammy is...</h2>
+        <p>Andy Schwam</p>
+        <p>Father, Husband, Geek.</p>
+        <p>13x Microsoft MVP (retired)</p>
+    </section>
+
+    <section class="sidebar-section">
+        <h2>Recent Posts</h2>
+        <ul>
+            {{ $posts := where site.RegularPages "Section" "posts" }}
+            {{ range first 5 $posts.ByDate.Reverse }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+        </ul>
+    </section>
+</aside>

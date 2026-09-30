@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+</head>
+
+<body>
+    <div class="site-shell">
+        <div class="page-layout">
+            <main>
+                <h1>{{ .Site.Title }}</h1>
+                <ul>
+                    {{ range site.RegularPages }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ else }}
+                    <li>No posts yet.</li>
+                    {{ end }}
+                </ul>
+            </main>
+            {{ partial "sidebar.html" . }}
+        </div>
+    </div>
+</body>
+
+</html>
