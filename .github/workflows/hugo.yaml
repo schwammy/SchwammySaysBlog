@@ -25,6 +25,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # TODO: Upgrade these actions after run #1's Node.js 20 runtime warning.
       - name: Check out repository
         uses: actions/checkout@v4
         with:
