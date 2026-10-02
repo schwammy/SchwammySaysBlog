@@ -4,6 +4,7 @@ slug: "custom-server-controls-createchildcontrols-or-render"
 date: "2007-09-28T15:34:04\u002B00:00"
 author: "schwammy"
 categories: ["asp.net"]
+draft: true
 ---
 
 This will be the first in series of posts I’ll be writing about creating server controls. I’ll try to share some of what I learned from my research while I prepared for a recent presentation.
@@ -49,7 +50,7 @@ My sample CompositeControl will have 2 controls within it:
         }
 ```
 
-In option A, CreateChildControls is used simple to set properties on the controls and add them to the Controls Collection. The Render() method takes care of layout. In particular, I like being able to use the HtmlTextWriterTag enumeration with the RenderBeginTag() method. By the way, the RenderEndTag() method will “close” whatever tag is next in line to be closed within the nested hierarchy of tags. Note that the Div tag I render isn’t really necessary. But I want all of my samples to render the same markup, so I put that in. Use the AddAttribute() method to add attributes to whichever tag is written next after the AddAtttribute() call. So in this sample, the CellPadding attribute will get written into the table as <table cellpadding=”1″>.
+In option A, CreateChildControls is used simple to set properties on the controls and add them to the Controls Collection. The Render() method takes care of layout. In particular, I like being able to use the HtmlTextWriterTag enumeration with the RenderBeginTag() method. By the way, the RenderEndTag() method will “close” whatever tag is next in line to be closed within the nested hierarchy of tags. Note that the Div tag I render isn’t really necessary. But I want all of my samples to render the same markup, so I put that in. Use the AddAttribute() method to add attributes to whichever tag is written next after the AddAtttribute() call. So in this sample, the CellPadding attribute will get written into the table as `<table cellpadding="1">`.
 
 ### Option B:
 
@@ -160,7 +161,7 @@ In the browser, I used “View Source” and got the following:
         </div>
 ```
 
-Looks pretty close, huh? There was one extra trick I did to make these match up. First, remember that in Option A, I added an extra <div> tag when I rendered my control. Without it, my option A control’s outer tag would have been <table>. Either way may work fine in your application. Second, Options B and C also have the following code included:
+Looks pretty close, huh? There was one extra trick I did to make these match up. First, remember that in Option A, I added an extra `<div>` tag when I rendered my control. Without it, my option A control’s outer tag would have been `<table>`. Either way may work fine in your application. Second, Options B and C also have the following code included:
 
 ```csharp
         protected override HtmlTextWriterTag TagKey
@@ -169,6 +170,6 @@ Looks pretty close, huh? There was one extra trick I did to make these match up.
         }
 ```
 
-Without this override, my controls in Options B and C would have an outermost tag of <span> instead of <div>. Many people prefer to have controls render with <div> tags and this is how to do it!
+Without this override, my controls in Options B and C would have an outermost tag of `<span>` instead of `<div>`. Many people prefer to have controls render with `<div>` tags and this is how to do it!
 
 I hope this information is helpful to you. Unfortunately, there isn’t always a clear answer of which method is best.

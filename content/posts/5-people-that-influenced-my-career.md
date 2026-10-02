@@ -3,6 +3,7 @@ title: "5 People that Influenced My Career"
 slug: "5-people-that-influenced-my-career"
 date: "2008-02-01T01:33:40\u002B00:00"
 author: "schwammy"
+draft: true
 ---
 
 I have an idea, I hope it will catch on like the “I’ve Been Tagged” (see below) series of blog posts. It was inspired by my [previous blog post](http://www.schwammysays.net/Paying+It+Forward+Geek+Style.aspx), which was inspired by a recent [post](http://www.hanselman.com/blog/StandingOnTheirShouldersAndPayingItForward.aspx) by [Scott Hanselman](http://www.hanselman.com/blog/). I encourage all bloggers to write a post and mention 5 people that influenced their careers. It doesn’t have to be a chain, you don’t need to be “tagged” to join in. Just pick your 5 people. None of the people I am naming have blogs themselves. It’s just a chance to say thank you. You can pick anyone you want, it doesn’t even have to be someone you know personally or worked with, just someone who has had an impact on your career.

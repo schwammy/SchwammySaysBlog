@@ -4,6 +4,7 @@ slug: "vista-is-installed-and-working-after-a-few-bumps-in-the-road"
 date: "2007-04-26T22:00:06\u002B00:00"
 author: "schwammy"
 categories: ["Vista"]
+draft: true
 ---
 
 So I finally got my copy of Vista. It took a while, but that is another story. I’ve got Vista Ultimate and my PC is pretty new, I built it myself. Here are the specs that I think are important regarding the Vista install:
